@@ -829,6 +829,17 @@ section,
   border-radius: 10px;
 }
 
+.seccion-investigacion {
+  margin-top: 20px;
+
+}
+
+.seccion-investigacion .what-are {
+    text-transform: uppercase;
+  margin-top: 150px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
