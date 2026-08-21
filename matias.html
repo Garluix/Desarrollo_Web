@@ -7,6 +7,10 @@
   <title>Perfil - Matias Palma</title>
   <link rel="icon" type="image/png" href="assets/img/horsecon.png">
 
+  <!-- Favicons -->
+  <link href="assets/img/horsecon.png" rel="icon">
+  <link href="assets/img/horsecon.png" rel="apple-touch-icon">
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -34,7 +38,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="integrantes.html" class="active">Integrantes</a></li>
+          <li><a href="Integrantes.html" class="active">Integrantes</a></li>
           <li><a href="investigacion.html">Investigación</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -51,7 +55,7 @@
         
         <!-- Botón Volver -->
         <div class="mb-4">
-          <a href="integrantes.html" class="btn btn-light btn-sm shadow-sm text-dark px-3 py-2" style="border-radius: 20px; font-weight: 500;">
+          <a href="Integrantes.html" class="btn btn-light btn-sm shadow-sm text-dark px-3 py-2" style="border-radius: 20px; font-weight: 500;">
             <i class="bi bi-arrow-left me-1"></i> Volver a Integrantes
           </a>
         </div>
@@ -60,7 +64,7 @@
           <div class="col-lg-7 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <span class="text-uppercase fw-bold mb-2" style="letter-spacing: 2px; color: #555; font-size: 0.85rem;">Perfil de Integrante</span>
             <h2 class="display-5 fw-bold mb-2">Matías Ignacio Palma Sepúlveda</h2>
-            <h5 class="text-secondary fw-semibold mb-3">Desarrollador / Encargado de Git</h5>
+            <h5 class="text-secondary fw-semibold mb-3">Git Developer</h5>
             <p class="lead" style="font-size: 1.1rem; color: #444;">
               Estudiante enfocado en el desarrollo del proyecto, arquitectura de software y control de versiones para el equipo SIX-SEVEN.
             </p>
@@ -110,6 +114,151 @@
           </div>
         </div>
       </div>
+
+      <!-- SECCIÓN BENTO GRID CENTRADA -->
+      <div class="container position-relative mt-5">
+        <div class="text-center mb-4">
+          <h3 class="fw-bold">Portafolio y Proyectos</h3>
+          <p class="text-muted small">Evidencias y áreas de trabajo en el proyecto</p>
+        </div>
+
+        <!-- FILA PRINCIPAL DEL BENTO GRID -->
+        <div class="row g-4">
+
+          <!-- Tarjeta Proyecto Principal (Grande - 8 columnas) -->
+          <div class="col-lg-8">
+            <div class="card h-100 border-0 rounded-4 shadow-sm p-4 bg-white position-relative overflow-hidden">
+              
+              <!-- Encabezado de la tarjeta -->
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge bg-primary px-3 py-2 rounded-pill">Backend & Seguridad</span>
+                  <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle px-3 py-2 rounded-pill fw-semibold">
+                    <i class="bi bi-check-circle me-1"></i> Finalizado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Título y Propósito -->
+              <h4 class="fw-bold mb-2">Módulo de Autenticación y Cifrado de Datos</h4>
+              <p class="text-muted mb-3">
+                Desarrollo de un sistema seguro de gestión de identidades y encriptación de credenciales para el control de acceso a servicios web.
+              </p>
+
+              <!-- Imagen del proyecto -->
+              <div class="rounded-3 overflow-hidden my-3 border shadow-sm">
+                <img src="assets/img/about-company-1.jpg" 
+                     alt="Vista previa del Sistema de Seguridad" 
+                     class="img-fluid w-100" 
+                     style="height: 220px; object-fit: cover;">
+              </div>
+
+              <!-- Características y tecnologías -->
+              <div class="mt-3">
+                <h6 class="fw-bold text-dark mb-2">Principales Características:</h6>
+                <ul class="text-muted small ps-3 mb-3">
+                  <li>Implementación de algoritmos de cifrado y hashing para contraseñas.</li>
+                  <li>Mapeo de permisos y validación de tokens en sesiones de usuario.</li>
+                  <li>Arquitectura modular orientada a integración continua.</li>
+                </ul>
+
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-light text-secondary border">Java</span>
+                  <span class="badge bg-light text-secondary border">Python</span>
+                  <span class="badge bg-light text-secondary border">Git</span>
+                  <span class="badge bg-light text-secondary border">Docker</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Proyecto Secundario 1 (Lateral - 4 columnas) -->
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 rounded-4 shadow-sm p-4 bg-white d-flex flex-column">
+              
+              <!-- Encabezado -->
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="badge bg-dark px-3 py-2 rounded-pill">DevOps & Control</span>
+                <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle px-3 py-2 rounded-pill fw-semibold">
+                  <i class="bi bi-check-circle me-1"></i> Finalizado
+                </span>
+              </div>
+
+              <!-- Título y Propósito -->
+              <h5 class="fw-bold mb-2">Flujo Git & Automatización de Despliegues</h5>
+              <p class="text-muted small mb-3">
+                Configuración del flujo colaborativo de trabajo, resolución de conflictos y empaquetado del sitio web.
+              </p>
+
+              <!-- Imagen -->
+              <div class="rounded-3 overflow-hidden my-2 border shadow-sm">
+                <img src="assets/img/about-company-2.jpg" 
+                    alt="Estructura Git" 
+                    class="img-fluid w-100" 
+                    style="height: 140px; object-fit: cover;">
+              </div>
+
+              <!-- Características -->
+              <div class="mt-2 mb-3">
+                <h6 class="fw-bold text-dark small mb-1">Características:</h6>
+                <ul class="text-muted small ps-3 mb-0" style="font-size: 0.8rem;">
+                  <li>Estandarización de ramas y políticas de Pull Requests.</li>
+                  <li>Estructura de contenedores con Nginx y Dockerfile.</li>
+                </ul>
+              </div>
+
+              <!-- Tecnologías -->
+              <div class="mt-auto">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-light text-secondary border" style="font-size: 0.75rem;">Git / GitHub</span>
+                  <span class="badge bg-light text-secondary border" style="font-size: 0.75rem;">Docker</span>
+                  <span class="badge bg-light text-secondary border" style="font-size: 0.75rem;">Linux</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Proyecto Secundario 2 (Inferior - 6 columnas) -->
+          <div class="col-md-6">
+            <div class="card h-100 border-0 rounded-4 shadow-sm p-4 bg-white d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill">Sistemas & Backend</span>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-3 py-2 rounded-pill fw-semibold">
+                  <i class="bi bi-clock-history me-1"></i> En Desarrollo
+                </span>
+              </div>
+              <h5 class="fw-bold mb-2">Sistema de Gestión de Recursos</h5>
+              <p class="text-muted small mb-3">
+                Aplicación orientada a objetos para el control de inventario, procesamiento de solicitudes y registro persistente de transacciones.
+              </p>
+
+              <div class="rounded-3 overflow-hidden my-2 border shadow-sm">
+                <img src="assets/img/about-company-3.jpg" alt="Gestión de Recursos" class="img-fluid w-100" style="height: 140px; object-fit: cover;">
+              </div>
+              
+              <div class="mt-2 mb-3">
+                <h6 class="fw-bold text-dark small mb-1">Características:</h6>
+                <ul class="text-muted small ps-3 mb-0" style="font-size: 0.8rem;">
+                  <li>Diseño estructurado bajo patrones de arquitectura de software.</li>
+                  <li>Persistencia de datos y manejo de excepciones robusto.</li>
+                </ul>
+              </div>
+
+              <div class="mt-auto">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-light text-secondary border" style="font-size: 0.75rem;">Java</span>
+                  <span class="badge bg-light text-secondary border" style="font-size: 0.75rem;">POO</span>
+                  <span class="badge bg-light text-secondary border" style="font-size: 0.75rem;">SQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- Fin de .row g-4 -->
+
+      </div> <!-- Fin de .container -->
 
     </section>
 
