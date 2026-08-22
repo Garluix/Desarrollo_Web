@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Semántica HTML - EQUIPO SIX-SEVEN</title>
+  <link rel="icon" type="image/png" href="assets/img/horsecon.png">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/horsecon.png" rel="icon">
+  <link href="assets/img/horsecon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Estilos CSS personalizados para simular el estilo Clean Blog -->
+  <style>
+    /* Encabezado grande tipo "Clean Blog" con imagen de fondo */
+    .blog-header {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/bootstrap-imagenes.png') center center no-repeat;
+      background-size: cover;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .blog-header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: "Raleway", sans-serif;
+    }
+    .blog-header p {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    /* Estilo de los artículos de investigación */
+    .post-preview {
+      border-bottom: 1px solid #dee2e6;
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+    }
+    .post-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #212529;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .post-title:hover {
+      color: #3498db;
+    }
+    .post-subtitle {
+      font-size: 1.1rem;
+      color: #6c757d;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      color: #868e96;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo-equipo.jpg" alt="Logo del equipo">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="investigacion.html" class="active">Investigación</a></li>
+            </ul>
+
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <header class="blog-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1>HTML</h1>
+            <p>Etiquetas semánticas de HTML</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!--Titulo todo bonito-->
+            <div class="post-preview">
+                <h2 class="post-title">¿Qué son las etiquetas semánticas?</h2>
+                <p class="post-subtitle">Las etiquetas semánticas perimten organizar el contenido de una página HTML según 
+                    la función que cumple cada sección.</p>
+                
+            </div>
+
+            <!--Parte de Header-->
+            <div class="post-preview">
+                <h2 class="post-title">&lt;header&gt;</h2>
+                <p class="post-subtitle">La etiqueta &lt;header&gt; se utiliza para definir el encabezado de una página o de una sección.
+                    Puede contener elementos como títulos, logotipos y otros elementos relacionados con la introducción del contenido.</p>
+                
+                <!--Dato adicional del Header-->
+                <aside>
+                    <strong><i class="bi bi-lightbulb"></i> Dato adicional:</strong>
+                        Un &lt;header&gt; no necesariamente corresponde al encabezado de toda la página.
+                        También puede utilizarse como encabezado de una sección o de un &lt;article&gt;.
+                </aside>
+
+                <!--Parte del como lo usamos (Header)-->
+                <h3 class="post-title">¿Cómo utilizamos &lt;header&gt; en SIX-SEVEN?</h3>
+                <p class="post-subtitle"> En nuestro proyecto, utilizamos la etiqueta &lt;header&gt; para estructurar el encabezado principal de nuestras páginas. 
+                    En él se encuentra el logotipo del equipo y la barra de navegación, permitiendo identificar el sitio y facilitar el acceso a 
+                    sus distintas secciones. En nuestro sitio web, el &lt;header&gt; contiene tanto el logotipo de SIX-SEVEN como el elemento &lt;nav&gt; utilizado para 
+                    la navegación principal.</p>
+
+                <!--Imagen del Header-->
+                <img src="assets/img/Captura-header.png" alt="Captura del código Header">
+            </div>
+
+            <!--Parte de Nav-->
+            <div class="post-preview">
+                <h2 class="post-title">&lt;nav&gt;</h2>
+                <p class="post-subtitle">La etiqueta &lt;nav&gt; se utiliza para definir una sección de navegación dentro de una página web.
+                    Generalmente contiene enlaces que permiten al usuario desplazarse hacia otras páginas o secciones del sitio.</p>
+                
+                <!--Dato adicional del Nav-->
+                <aside>
+                    <strong><i class="bi bi-lightbulb"></i> Dato adicional:</strong>
+                        La etiqueta &lt;nav&gt; no tiene que contener todos los enlaces de una página. Se utiliza para agrupar enlaces que forman parte de una 
+                        sección de navegación importante, como el menú principal de un sitio.
+                </aside>
+                
+                <!--Parte del como lo usamos (Nav)-->
+                <h3 class="post-title">¿Cómo utilizamos &lt;nav&gt; en SIX-SEVEN?</h3>
+                <p class="post-subtitle">En nuestro sitio web, utilizamos la etiqueta &lt;nav&gt; para agrupar los enlaces
+                    que forman parte de la navegación principal. Esta se encuentra dentro del
+                    &lt;header&gt; y permite a los usuarios desplazarse entre las distintas páginas
+                    del sitio, como Inicio, Integrantes e Investigación.</p>
+
+                <!--Imagen del Nav-->
+                <img src="assets/img/Captura-nav.png" alt="Captura del código Nav">
+            </div>
+
+            <!--Parte de Main-->
+            <div class="post-preview">
+                <h2 class="post-title">&lt;main&gt;</h2>
+                <p class="post-subtitle">La etiqueta &lt;main&gt; se utiliza para identificar el contenido principal de una página web.
+                    Dentro de ella se coloca la información central que constituye el propósito principal de la página.</p>
+                
+                <!--Dato adicional del Main-->
+                <aside>
+                    <strong><i class="bi bi-lightbulb"></i> Dato adicional:</strong>
+                        Una página debe tener un solo elemento &lt;main&gt; que represente su contenido principal.
+                        Los elementos como &lt;header&gt;, &lt;nav&gt; y &lt;footer&gt; pueden acompañarlo,
+                        pero no forman parte del contenido principal representado por &lt;main&gt;.
+                </aside>
+                <!--Parte del como lo usamos (Main)-->
+                <h3 class="post-title">¿Cómo utilizamos &lt;main&gt; en SIX-SEVEN?</h3>
+                <p class="post-subtitle">En nuestro sitio web, utilizamos la etiqueta &lt;main&gt; para contener el contenido
+                    principal de cada página. Dentro de este elemento organizamos las diferentes secciones
+                    que presentan la información más importante del sitio, separándola de elementos como
+                    el encabezado y el pie de página.</p>
+
+                <!--Imagen del Main-->
+                <img src="assets/img/Captura-main.png" alt="Captura del código Main">
+            </div>
+
+
+            <!--Parte de Section-->
+            <div class="post-preview">
+                <h2 class="post-title">&lt;section&gt;</h2>
+                <p class="post-subtitle">La etiqueta &lt;section&gt; se utiliza para dividir el contenido de una página en secciones relacionadas entre sí.
+                    Cada sección puede agrupar contenido que pertenece a un mismo tema o propósito.</p>
+
+                <!--Dato adicional del Section-->
+                <aside>
+                    <strong><i class="bi bi-lightbulb"></i> Dato adicional:</strong>
+                    Una página puede contener varias etiquetas &lt;section&gt;.
+                    Cada una debe representar un grupo de contenido relacionado y, normalmente,
+                    puede identificarse mediante un encabezado propio.
+                </aside>
+
+                <!--Parte del como lo usamos (Section)-->
+                <h3 class="post-title">¿Cómo utilizamos &lt;section&gt; en SIX-SEVEN?</h3>
+                <p class="post-subtitle">En nuestro sitio web, utilizamos la etiqueta &lt;section&gt; para organizar el contenido
+                    principal en diferentes grupos relacionados. Por ejemplo, dentro del &lt;main&gt; de
+                    nuestra página de inicio utilizamos una sección para presentar al equipo y otras
+                    secciones para organizar diferentes contenidos del sitio.
+                </p>
+
+                <!--Imagen del Section-->
+                <img src="assets/img/Captura-section.png" alt="Captura del código Section">
+            </div>
+
+            <!--Parte de Article-->
+            <div class="post-preview">
+                <h2 class="post-title">&lt;article&gt;</h2>
+                <p class="post-subtitle">La etiqueta &lt;article&gt; se utiliza para representar un contenido independiente dentro de una página.
+                    Puede utilizarse para elementos como artículos, publicaciones, noticias o cualquier contenido que tenga sentido por sí mismo.</p>
+
+                <!--Dato adicional del Article-->
+                <aside>
+                    <strong><i class="bi bi-lightbulb"></i> Dato adicional:</strong>
+                    El contenido de un &lt;article&gt; debe poder comprenderse por sí mismo,
+                    incluso si se separa del resto del contenido de la página.
+                </aside>
+
+                <!--Parte del como lo usamos (Article)-->
+                <h3 class="post-title">¿Cómo utilizamos &lt;article&gt; en SIX-SEVEN?</h3>
+                <p class="post-subtitle">En nuestro sitio web, utilizamos la etiqueta &lt;article&gt; para representar cada
+                    investigación como un contenido independiente. En el índice de investigaciones,
+                    cada tarjeta contiene información sobre un tema específico y puede comprenderse
+                    de manera individual, por lo que resulta apropiado utilizar &lt;article&gt; para
+                    estructurar estas tarjetas.
+                </p>
+
+                <!--Imagen del Article-->
+                <img src="assets/img/Captura-article.png" alt="Captura del código Article">
+            </div>
+
+            <!--Parte de Aside-->
+            <div class="post-preview">
+                <h2 class="post-title">&lt;aside&gt;</h2>
+                <p class="post-subtitle">La etiqueta &lt;aside&gt; se utiliza para contener información relacionada con el contenido principal,
+                    pero que no forma parte directamente de este. Puede utilizarse para incluir información complementaria,
+                    enlaces, notas o contenido adicional.</p>
+                
+                <!--Dato adicional del Aside-->
+                <aside>
+                    <strong><i class="bi bi-lightbulb"></i> Dato adicional:</strong>
+                    El contenido de un &lt;aside&gt; debe complementar al contenido principal,
+                    pero no ser indispensable para comprenderlo. Puede utilizarse para mostrar
+                    información adicional, consejos, notas o datos relacionados.
+                </aside>
+
+                <!--Parte del como lo usamos (Aside)-->
+                <h3 class="post-title">¿Cómo utilizamos &lt;aside&gt; en SIX-SEVEN?</h3>
+                <p class="post-subtitle">En nuestra investigación utilizamos la etiqueta &lt;aside&gt; para mostrar
+                    información complementaria relacionada con cada etiqueta HTML. Estos bloques
+                    contienen datos adicionales que ayudan a ampliar la información presentada,
+                    pero que no son necesarios para comprender la explicación principal.
+                </p>
+
+                <!--Imagen del Aside-->.
+                <img src="assets/img/Captura-Aside.png" alt="Captura del código Aside">
+            </div>
+
+            <div class="post-preview">
+                <h2 class="post-title">&lt;footer&gt;</h2>
+                <p class="post-subtitle">La etiqueta &lt;footer&gt; se utiliza para definir el pie de página de un documentoo de una sección.
+                    Puede contener información como derechos de autor, enlaces, datos de contacto u otra información relacionada con el contenido.</p>
+
+                <aside>
+                    <strong><i class="bi bi-lightbulb"></i> Dato adicional:</strong>
+                    Un &lt;footer&gt; no tiene que aparecer solamente una vez al final de la página.
+                    También puede utilizarse como pie de una sección o de un &lt;article&gt;,
+                    incluyendo información relacionada con ese contenido.
+                </aside>
+
+            </div>
+
+            <!-- Botón inferior para volver al índice -->
+            <div class="clearfix text-end mt-4">
+                <a class="btn btn-primary text-uppercase" href="Investigacion.html">&larr; Volver al Índice</a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Pie de página idéntico -->
+  <footer id="footer" class="footer light-background">
+    <div class="container text-center">
+      <div class="copyright">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">EQUIPO SIX-SEVEN</strong> <span>All Rights Reserved</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
