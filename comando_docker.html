@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Comandos Docker - EQUIPO SIX-SEVEN</title>
+  <link rel="icon" type="image/png" href="assets/img/horsecon.png">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Archivos CSS de la plantilla -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .blog-header {
+      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(121, 82, 179, 0.75)), url('assets/img/bootstrap-imagenes.png') center center no-repeat;
+      background-size: cover;
+      color: white;
+      padding: 90px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .blog-header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* Tarjeta Docker */
+    .docker-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .docker-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Barra superior tipo terminal */
+    .terminal-header {
+      background-color: #0f172a;
+      color: #38bdf8;
+      padding: 12px 20px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Bloque de comando monoespaciado */
+    .code-console {
+      font-family: 'Fira Code', monospace;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #0f172a;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 4px;
+      word-break: break-all;
+    }
+
+    .pill-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- Header / Barra superior -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-equipo.jpg" alt="Logo SIX-SEVEN">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="investigacion.html">Investigación</a></li>
+          <li><a href="docker.html" class="active">Docker</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main light-background">
+
+    <!-- Encabezado Blog -->
+    <header class="blog-header">
+      <div class="container">
+        <h1>Investigación de Comandos Docker</h1>
+        <p>Referencia técnica, sintaxis, ejemplos y casos de uso en el ciclo de vida de contenedores</p>
+      </div>
+    </header>
+
+    <div class="container my-5">
+      <div class="row g-4">
+
+        <!-- 1. docker --version -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker --version</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Consultar la versión de Docker instalada en el sistema local.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker --version</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker --version</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Docker version 29.7.2. Se utiliza como comprobación inicial post-instalación para verificar que el cliente CLI de Docker está operativo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. docker run hello-world -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker run hello-world</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Ejecutar una imagen oficial de prueba para validar el motor.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker run hello-world</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker run hello-world</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Descarga la imagen del Hub, la ejecuta mostrando un mensaje de bienvenida y finaliza. Valida que el demonio de Docker puede descargar y correr contenedores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. docker images -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker images</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Listar las imágenes locales almacenadas en el equipo.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker images [OPCIONES] [REPOSITORIO[:TAG]]</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker images -a</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Muestra una tabla con Repositorio, Tag, Image ID, Fecha de creación y Tamaño. Se usa para auditar imágenes disponibles y obtener IDs para ejecución o borrado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. docker ps -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker ps</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Mostrar los contenedores que se encuentran activos.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker ps [OPCIONES]</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker ps</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Lista los contenedores con estado "Up", puertos expuestos y nombres asignados. Permite comprobar en tiempo real si el servidor web de la aplicación está activo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. docker ps -a -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker ps -a</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Mostrar todos los contenedores (activos, pausados y detenidos).</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker ps -a</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker ps -a</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Presenta el historial completo de contenedores. Indispensable para diagnosticar contenedores que se cerraron con errores o recuperar IDs para reiniciarlos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. docker build -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker build</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Construir una nueva imagen personalizada desde un archivo Dockerfile.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker build [OPCIONES] RUTA_CONTEXTO</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker build -t app-six-seven:v1 .</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Ejecuta secuencialmente las directivas del Dockerfile en el directorio actual (<code>.</code>) y etiqueta la imagen lista para ser desplegada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. docker run -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker run</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Crear y poner en ejecución un contenedor a partir de una imagen.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker run [OPCIONES] IMAGEN [COMANDO]</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker run -d -p 8080:80 --name web-equipo app-six-seven:v1</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Inicia el contenedor en segundo plano (<code>-d</code>) vinculando el puerto 8080 local al 80 del servidor web para poder abrir el sitio desde el navegador.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. docker stop -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker stop</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Detener la ejecución de uno o más contenedores de forma ordenada.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker stop [OPCIONES] CONTENEDOR [CONTENEDOR...]</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker stop web-equipo</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Envía la señal SIGTERM para que los procesos internos guarden estado y cierren conexiones antes del apagado seguro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. docker start -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker start</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Reanudar la ejecución de un contenedor previamente detenido.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker start [OPCIONES] CONTENEDOR</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker start web-equipo</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Reactiva el contenedor conservando sus datos, mapeo de puertos y configuraciones originales sin necesidad de crearlo de nuevo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. docker rm -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker rm</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Eliminar definitivamente uno o más contenedores del sistema.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker rm [OPCIONES] CONTENEDOR</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker rm -f web-equipo</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Elimina el contenedor. Si está en ejecución se usa la bandera de forzado (<code>-f</code>). Se usa para limpieza de recursos y liberación de nombres de contenedores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. docker rmi -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker rmi</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Eliminar una o más imágenes almacenadas localmente.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker rmi [OPCIONES] IMAGEN [IMAGEN...]</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker rmi app-six-seven:v1</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Borra la imagen del disco duro siempre que no haya contenedores dependientes de ella. Esencial para liberar almacenamiento en disco.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. docker logs -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker logs</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Consultar la salida estándar y registros generados por un contenedor.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker logs [OPCIONES] CONTENEDOR</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker logs -f --tail 50 web-equipo</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Muestra los mensajes de consola y errores de la aplicación en tiempo real (<code>-f</code>). Utilizado en depuración técnica cuando un servicio no responde.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. docker exec -->
+        <div class="col-lg-6">
+          <div class="docker-card h-100 d-flex flex-column">
+            <div class="terminal-header"><i class="bi bi-terminal-fill text-warning me-2"></i>docker exec</div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h6 class="fw-bold text-dark mb-1">Uso Principal:</h6>
+              <p class="text-muted small mb-3">Ejecutar un nuevo comando dentro de un contenedor que está corriendo.</p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border pill-label">Sintaxis General</span>
+                <code class="code-console">docker exec [OPCIONES] CONTENEDOR COMANDO [ARG...]</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary border pill-label">Ejemplo de Uso</span>
+                <code class="code-console">docker exec -it web-equipo sh</code>
+              </div>
+
+              <div class="mt-auto p-3 bg-light rounded-3 border">
+                <span class="badge bg-success-subtle text-success border pill-label mb-1">Resultado / Caso de Uso</span>
+                <p class="text-muted small mb-0">Abre una sesión interactiva (<code>-it</code>) dentro del contenedor para verificar archivos, configuraciones o conectividad de red interna.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botón de regreso -->
+      <div class="text-center mt-5 mb-4">
+        <a class="btn btn-outline-dark px-4 py-2 rounded-pill shadow-sm" href="index.html">
+          <i class="bi bi-arrow-left me-1"></i> Volver al Inicio
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer light-background text-center py-4">
+    <div class="container">
+      <p class="mb-0">© <strong>EQUIPO SIX-SEVEN</strong> - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
