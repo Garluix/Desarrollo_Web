@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Construcción y publicación con Nginx - EQUIPO SIX-SEVEN</title>
+
+  <link rel="icon" type="image/png" href="assets/img/horsecon.png">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Archivos CSS de Vendor y Plantilla -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Estilos propios de la investigación -->
+</head>
+
+
+<body class="index-page page-nginx">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center"><img src="assets/img/logo-equipo.jpg" alt="Logo SIX-SEVEN"></a>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="investigacion.html" class="active">Investigación</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="main">
+        <header class="blog-header">
+            <div class="container">
+                <h1>Nginx</h1>
+                <p>Construcción y publicación del sitio mediante Docker y Nginx</p>
+            </div>
+        </header>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="investigation-card">
+                    <div class="icon-box-badge icon-purple">
+                        <i class="bi bi-server"></i>
+                    </div>
+                <h4 class="fw-bold text-dark mb-2">¿Qué es Nginx?</h4>
+                <p class="text-muted small mb-0">Nginx es un servidor web utilizado para entregar contenido a los usuarios
+                    mediante HTTP. En nuestro proyecto se utiliza dentro de un contenedor Docker
+                    para servir las páginas HTML, hojas de estilo, imágenes y demás recursos
+                    estáticos que forman parte del sitio web.</p>    
+                </div>
+            </div>
+
+        <div class="col-lg-6">
+            <div class="investigation-card h-100 d-flex flex-column">
+                <div class="icon-box-badge icon-blue">
+                    <i class="bi bi-globe2"></i>
+                </div>
+                <h4 class="fw-bold text-dark mb-2">Propósito de Nginx</h4>
+                <p class="text-muted small flex-grow-1">Una de las principales funciones de Nginx es actuar como servidor web, recibiendo las solicitudes
+                     realizadas por el navegador y entregando los archivos correspondientes. Esto permite que un sitio web estático
+                     pueda ser publicado y accesible desde un navegador.</p>
+            <aside>
+                <small class="text-secondary d-block">
+                    <strong>
+                        <i class="bi bi-lightbulb"></i>
+                        Dato adicional:
+                    </strong>
+                    Nginx también puede utilizarse como proxy inverso, balanceador de carga y servidor para contenido estático. En nuestro proyecto utilizamos
+                    principalmente su función como servidor web.
+                </small>
+            </aside>
+
+            <h6 class="fw-bold mt-2 mb-2">¿Cómo utilizamos Nginx en SIX-SEVEN?</h6>
+            <p class="text-muted small mb-0">En nuestro proyecto utilizamos Nginx dentro de un contenedor Docker para publicar nuestro sitio web.
+                El servidor recibe las solicitudes realizadas mediante el navegador y entrega los archivos del proyecto.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="investigation-card h-100 d-flex flex-column">
+                <div class="icon-box-badge icon-green">
+                    <i class="bi bi-filetype-docker"></i>
+                </div>
+                <h4 class="fw-bold text-dark mb-2">Dockerfile</h4>
+                <p class="text-muted small flex-grow-1">El Dockerfile contiene las instrucciones necesarias para construir nuestra imagen Docker.
+                    En él se establece Nginx como imagen base y se indican los archivos que serán utilizados dentro del servidor web.</p>
+                    <pre class="docker-code"><code>FROM nginx:alpine COPY . /usr/share/nginx/html</code></pre>
+                    
+                    <aside>
+                        <small class="text-secondary d-block">
+                            <strong>
+                                <i class="bi bi-lightbulb"></i>
+                                Dato adicional:
+                            </strong>
+                            Un Dockerfile no es una imagen ni un contenedor. Es un archivo de
+                            instrucciones que Docker utiliza para construir una imagen.
+                        </small>
+                    </aside>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div class="investigation-card">
+                <div class="icon-box-badge icon-amber">
+                    <i class="bi bi-list-check"></i>
+                </div>
+                <h4 class="fw-bold text-dark mb-2">Instrucciones principales del Dockerfile</h4>
+            <p class="text-muted small">Nuestro Dockerfile utiliza dos instrucciones principales para preparar el servidor web.</p>
+            <h6 class="fw-bold mt-3 mb-2"><span class="code-tag">FROM nginx:alpine</span></h6>
+            <p class="text-muted small">Indica que la imagen se construirá utilizando <strong>nginx:alpine</strong> como imagen base. Alpine Linux es una 
+                distribución ligera, por lo que permite utilizar una imagen de Nginx de menor tamaño.</p>
+
+            <h6 class="fw-bold mt-3 mb-2"><span class="code-tag">COPY . /usr/share/nginx/html</span></h6>
+            <p class="text-muted small mb-0">Copia los archivos del proyecto desde el directorio utilizado como contexto de construcción hacia la carpeta
+              <strong>/usr/share/nginx/html</strong>, que es utilizada por Nginx para servir contenido web.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="investigation-card h-100 d-flex flex-column">
+                <div class="icon-box-badge icon-indigo">
+                    <i class="bi bi-box-arrow-in-down"></i>
+                </div>
+            <h4 class="fw-bold text-dark mb-2">Construcción de la imagen</h4>
+            <p class="text-muted small flex-grow-1">Para construir la imagen Docker a partir del Dockerfile utilizamos
+                el comando <strong>docker build</strong>. Con la opción <strong>-t</strong> asignamos un nombre a la imagen.</p>
+            <pre class="docker-code"><code>docker build -t mi-web-html .</code></pre>
+
+            <aside>
+                <small class="text-secondary d-block">
+                    <strong>
+                        <i class="bi bi-lightbulb"></i>
+                        Dato adicional:
+                    </strong>
+                    El punto final indica que Docker debe utilizar el directorio
+                    actual como contexto para la construcción de la imagen.
+                </small>
+            </aside>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="investigation-card h-100 d-flex flex-column">
+                <div class="icon-box-badge icon-rose">
+                    <i class="bi bi-play-circle"></i>
+                </div>
+                <h4 class="fw-bold text-dark mb-2">Ejecución del contenedor</h4>
+                <p class="text-muted small flex-grow-1">Una vez construida la imagen, utilizamos <strong>docker run</strong> para crear y ejecutar un contenedor
+                basado en ella.</p>
+                <pre class="docker-code"><code>docker run -d -p 8080:80 --name mi-web-container mi-web-html</code></pre>
+                <aside>
+                    <small class="text-secondary d-block">
+                        <strong>
+                            <i class="bi bi-lightbulb"></i>
+                            Dato adicional:
+                        </strong>
+                        La opción <strong>-d</strong> permite ejecutar el contenedor
+                        en segundo plano, mientras que <strong>--name</strong> permite
+                        asignarle un nombre específico.
+                    </small>
+                </aside>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="investigation-card">
+                <div class="icon-box-badge icon-purple">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+                <h4 class="fw-bold text-dark mb-2">Mapeo de puertos</h4>
+                <p class="text-muted small">Para poder acceder desde nuestro computador al servidor Nginx que funciona dentro del contenedor, es necesario realizar un
+                mapeo entre un puerto del equipo y un puerto del contenedor.
+                </p>
+                <pre class="docker-code"><code>-p 8080:80</code></pre>
+                <p class="text-muted small">El puerto <strong>8080</strong> corresponde al puerto utilizado en nuestro computador,
+                    mientras que el puerto <strong>80</strong> corresponde al puerto donde Nginx escucha las solicitudes HTTP dentro del contenedor.</p>
+                    <aside>
+                        <small class="text-secondary d-block">
+                            <strong>
+                                <i class="bi bi-lightbulb"></i>
+                                Dato adicional:
+                            </strong>
+                            Gracias a este mapeo podemos acceder al sitio desde <strong>http://localhost:8080</strong> aunque Nginx esté 
+                            funcionando dentro del contenedor.
+                        </small>
+                    </aside>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="investigation-card">
+                <div class="icon-box-badge icon-blue">
+                    <i class="bi bi-browser-chrome"></i>
+                </div>
+                <h4 class="fw-bold text-dark mb-2">Evidencia del sitio funcionando</h4>
+                <p class="text-muted small">Una vez ejecutado el contenedor, el sitio puede ser consultado desde el navegador utilizando la dirección:</p>
+                <pre class="docker-code"><code>http://localhost:8080</code></pre>
+                <aside>
+                    <small class="text-secondary d-block">
+                        <strong>
+                            <i class="bi bi-lightbulb"></i>
+                            Dato adicional:
+                        </strong>
+                        Al acceder a <strong>http://localhost:8080</strong>, el navegador
+                        realiza una solicitud al puerto 8080 de nuestro equipo, que se encuentra
+                        conectado con el puerto 80 del contenedor donde funciona Nginx.
+                    </small>
+                </aside>
+                <img class="evidencia-nginx-img" src="assets/img/Evidencia-Nginx.png" alt="Sitio funcionando mediante Nginx en localhost:8080">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="investigation-card">
+                <div class="icon-box-badge icon-green">
+                    <i class="bi bi-terminal"></i>
+                </div>
+                <h4 class="fw-bold text-dark mb-2">Contenedor en ejecución</h4>
+                <p class="text-muted small">La ejecución del comando <strong>docker ps</strong> permite comprobar que el contenedor se encuentra funcionando.
+                En nuestro caso, el contenedor utilizado para publicar el sitio se identifica como <strong>mi-web-container</strong>.</p>
+                <pre class="docker-code"><code>docker ps</code></pre>
+                <aside>
+                    <small class="text-secondary d-block">
+                        <strong>
+                            <i class="bi bi-lightbulb"></i>
+                            Dato adicional:
+                        </strong>
+                        El comando <strong>docker ps</strong> permite consultar los contenedores
+                        que se encuentran actualmente en ejecución, mostrando información como
+                        su nombre, imagen utilizada y los puertos asociados.
+                    </small>
+                </aside>
+            <img src="assets/img/Captura-nginx-terminal.png" alt="Contenedor Nginx ejecutándose en Docker">
+            </div>
+
+        </div>
+    </div>
+    <div class="text-center mt-5 mb-4"><a class="btn btn-outline-dark px-4 py-2 rounded-pill shadow-sm" href="Investigacion.html">
+        <i class="bi bi-arrow-left me-1"></i>Volver al Índice</a></div>
+    </div>
+    </main>
+
+    <footer id="footer" class="footer light-background">
+
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">EQUIPO SIX-SEVEN</strong> <span>All Rights Reserved</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

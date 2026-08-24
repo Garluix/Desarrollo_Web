@@ -28,78 +28,9 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- Estilos CSS exclusivos para las tarjetas con zoom y caja semitransparente -->
-  <style>
-    .card-item {
-      position: relative;
-      margin-bottom: 40px;
-      border-radius: 8px;
-    }
-
-    .card-item .img-container {
-      overflow: hidden;
-      border-radius: 8px 8px 0 0;
-    }
-
-    .card-item img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .card-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .card-item .card-body {
-      background-color: rgba(255, 255, 255, 0.90) !important; 
-      padding: 30px;
-      margin: -160px 20px 20px 20px;
-      position: relative;
-      border-radius: 8px;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1) !important;
-      transition: box-shadow 0.3s ease-in-out;
-      text-align: center;
-      z-index: 2;
-    }
-
-    .card-item:hover .card-body {
-      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15) !important;
-    }
-
-    .card-item .card-title {
-      font-weight: 700;
-      margin-bottom: 15px;
-      font-size: 24px;
-      font-family: "Raleway", sans-serif;
-    }
-
-    .card-item .card-title a {
-      color: #222222;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .card-item:hover .card-title a {
-      color: #3498db; 
-    }
-
-    .card-item .card-text {
-      color: #555555;
-      font-size: 15px;
-    }
-
-    /* Agrega esto aquí: */
-    .section-title h2 {
-      font-size: 37px; 
-    }
-    
-    .section-title p {
-      font-size: 17px; 
-    }
-  </style>
 </head>
 
-<body class="index-page">
+<body class="index-page page-investigacion">
 
   <!-- Header / Barra de Navegación -->
   <header id="header" class="header d-flex align-items-center sticky-top">
@@ -140,51 +71,51 @@
           <div class="col-md-6">
             <div class="card-item">
               <div class="img-container">
-                <img src="assets/img/2023-04-11-Docker.jpg" class="img-fluid" alt="">
+                <a href="comando_docker.html"><img src="assets/img/2023-04-11-Docker.jpg" class="img-fluid" alt="Comando docker"></a>
               </div>
               <div class="card-body">
                 <h3 class="card-title"><a href="comando_docker.html">Comandos Docker</a></h3>
-                <p class="card-text">Optimiza el desarrollo y la ejecución de tus proyectos aislando entornos sin complicaciones. ¡Haz clic para leer la guía completa!</p>
+                <a href="comando_docker.html"><p class="card-text">Optimiza el desarrollo y la ejecución de tus proyectos aislando entornos sin complicaciones.
+                  ¡Haz clic para leer la guía completa!</p></a>
               </div>
             </div>
           </div>
 
-          <!-- Casilla 2 -->
           <div class="col-md-6">
             <div class="card-item">
               <div class="img-container">
-                <img src="assets/img/2022-11-10-CSS.jpg" class="img-fluid" alt="Investigación CSS">
+                <a href="css.html"><img src="assets/img/2022-11-10-CSS.jpg" class="img-fluid" alt="Investigación CSS"></a>
               </div>
               <div class="card-body">
                 <h3 class="card-title"><a href="css.html">CSS</a></h3>
-                <p class="card-text">Domina el diseño, los estilos y la maquetación visual para transformar cualquier página web. ¡Haz clic para sumergirte en el tema!</p>
+                <a href="css.html"><p class="card-text">Domina el diseño, los estilos y la maquetación visual para transformar cualquier página web.
+                  ¡Haz clic para sumergirte en el tema!</p></a>
               </div>
             </div>
           </div>
 
-          <!-- Casilla 3 -->
           <div class="col-md-6">
             <article class="card-item">
               <div class="img-container">
-                <img src="assets/img/2022-12-20-HTML5.jpg" class="img-fluid" alt="">
+                <a href="semantica.html"><img src="assets/img/2022-12-20-HTML5.jpg" class="img-fluid" alt="Investigación semánticas"></a>
               </div>
               <div class="card-body">
                 <h3 class="card-title"><a href="semantica.html">Etiquetas HTML semánticas</a></h3>
-                <p class="card-text">Descubre cómo estructurar páginas web modernas de forma limpia y accesible. 
-                  ¡Haz clic para conocer las etiquetas esenciales!</p>
+                <a href="semantica.html"><p class="card-text">Descubre cómo estructurar páginas web modernas de forma limpia y accesible. 
+                  ¡Haz clic para conocer las etiquetas esenciales!</p></a>
               </div>
             </article>
           </div>
 
-          <!-- Casilla 4 (Modificada para abrir el detalle de Bootstrap) -->
           <div class="col-md-6">
             <div class="card-item">
               <div class="img-container">
-                <img src="assets/img/boostrap.logo.jpg" class="img-fluid" alt="">
+                <a href="bootstrap.html"><img src="assets/img/boostrap.logo.jpg" class="img-fluid" alt=""></a>
               </div>
               <div class="card-body">
                 <h3 class="card-title"><a href="bootstrap.html">Boostrap</a></h3>
-                <p class="card-text">Aprende a diseñar interfaces responsivas y atractivas en tiempo récord usando este popular framework. ¡Entra y descúbrelo!</p>
+                <a href="bootstrap.html"><p class="card-text">Aprende a diseñar interfaces responsivas y atractivas en tiempo récord usando este popular framework.
+                   ¡Entra y descúbrelo!</p></a>
               </div>
             </div>
           </div>
@@ -192,12 +123,12 @@
           <div class="col-md-6">
             <article class="card-item">
               <div class="img-container">
-                <img src="assets/img/2022-12-20-HTML5.jpg" class="img-fluid" alt="Imagen de html para etiquetas comunes">
+                <a href="comunes.html"><img src="assets/img/2022-12-20-HTML5.jpg" class="img-fluid" alt="Imagen de html para etiquetas comunes"></a>
               </div>
               <div class="card-body">
                 <h3 class="card-title"><a href="comunes.html">Etiquetas HTML comunes</a></h3>
-                <p class="card-text">Descubre cómo estructurar páginas web modernas de forma limpia y accesible. 
-                  ¡Haz clic para conocer las etiquetas esenciales!</p>
+                <a href="comunes.html"><p class="card-text">Descubre cómo estructurar páginas web modernas de forma limpia y accesible. 
+                  ¡Haz clic para conocer las etiquetas esenciales!</p></a>
               </div>
             </article>
           </div>
@@ -205,22 +136,34 @@
           <div class="col-md-6">
             <article class="card-item">
               <div class="img-container">
-                <img src="assets/img/2023-04-11-Docker.jpg" class="img-fluid" alt="">
+                <a href="investigacion_docker.html"><img src="assets/img/2023-04-11-Docker.jpg" class="img-fluid" alt="Logo para la investigacion docker"></a>
               </div>
               <div class="card-body">
                 <h3 class="card-title"><a href="investigacion_docker.html">Docker</a></h3>
-                <p class="card-text">Optimiza el desarrollo y la ejecución de tus proyectos aislando entornos sin complicaciones. ¡Haz clic para leer la guía completa!</p>
+                <a href="investigacion_docker.html"><p class="card-text">Optimiza el desarrollo y la ejecución de tus proyectos aislando entornos sin complicaciones.
+                  ¡Haz clic para leer la guía completa!</p></a>
               </div>
             </article>
           </div>
 
-        </div> <!-- Cierra el .row -->
-      </div> <!-- Cierra el .container -->
-    </section> <!-- Cierra la sección -->
+          <div class="col-md-6 offset-3">
+            <div class="card-item">
+              <div class="img-container">
+                <a href="nginx.html"><img src="assets/img/Logo-Nginx.png" class="img-fluid" alt=""></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="nginx.html">Nginx</a></h3>
+                <a href="nginx.html"><p class="card-text">Aprende a diseñar interfaces responsivas y atractivas en tiempo récord usando este popular framework.
+                   ¡Entra y descúbrelo!</p></a>
+              </div>
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer id="footer" class="footer light-background">
     <div class="container text-center">
       <div class="copyright">
@@ -229,21 +172,12 @@
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>-->
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
