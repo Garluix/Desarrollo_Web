@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Investigación CSS - EQUIPO SIX-SEVEN</title>
+  <link rel="icon" type="image/png" href="assets/img/horsecon.png">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Archivos CSS de Vendor y Plantilla -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Estilos propios de la investigación -->
+  <style>
+    .blog-header {
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(121, 82, 179, 0.65)), url('assets/img/2022-11-10-CSS.jpg') center center no-repeat;
+      background-size: cover;
+      color: white;
+      padding: 90px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .blog-header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .investigation-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .investigation-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .icon-box-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .icon-purple { background-color: #f3e8ff; color: #7952b3; }
+    .icon-blue   { background-color: #e0f2fe; color: #0284c7; }
+    .icon-green  { background-color: #dcfce7; color: #16a34a; }
+    .icon-amber  { background-color: #fef3c7; color: #d97706; }
+    .icon-indigo { background-color: #e0e7ff; color: #4f46e5; }
+    .icon-rose   { background-color: #ffe4e6; color: #e11d48; }
+
+    .code-tag {
+      font-family: monospace;
+      background-color: #f1f5f9;
+      color: #0d6efd;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .box-model-diagram {
+      background-color: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- Header / Barra superior -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-equipo.jpg" alt="Logo SIX-SEVEN">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="investigacion.html" class="active">Investigación</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Encabezado Blog Header -->
+    <header class="blog-header">
+      <div class="container">
+        <h1>Investigación de CSS</h1>
+        <p>Hojas de Estilo en Cascada, Modelo de Caja y Maquetación Web</p>
+      </div>
+    </header>
+
+    <!-- Contenedor de la investigación -->
+    <div class="container my-5">
+      <div class="row g-4">
+
+        <!-- 1. Definición e Importancia -->
+        <div class="col-lg-6">
+          <div class="investigation-card h-100 d-flex flex-column">
+            <div class="icon-box-badge icon-purple">
+              <i class="bi bi-filetype-css"></i>
+            </div>
+            <h4 class="fw-bold text-dark mb-2">1. ¿Qué es CSS y cuál es su Importancia?</h4>
+            <p class="text-muted small flex-grow-1">
+              <strong>CSS (Cascading Style Sheets)</strong> es el lenguaje formal utilizado para describir la presentación visual y el diseño de documentos estructurados en HTML. Su función primordial es transformar documentos de texto plano en interfaces gráficas interactivas, estéticas y adaptables a cualquier pantalla.
+            </p>
+            <div class="p-3 bg-light rounded-3 border mt-2">
+              <small class="text-secondary d-block">
+                <strong>Importancia:</strong> Permite mantener el código modular, ahorra ancho de banda al cachear estilos externos y garantiza una experiencia de usuario (UX) coherente y accesible.
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Contenido vs Estructura vs Presentación -->
+        <div class="col-lg-6">
+          <div class="investigation-card h-100 d-flex flex-column">
+            <div class="icon-box-badge icon-blue">
+              <i class="bi bi-layers-half"></i>
+            </div>
+            <h4 class="fw-bold text-dark mb-2">2. Contenido, Estructura y Presentación</h4>
+            <p class="text-muted small mb-3">
+              El desarrollo web moderno se rige bajo el principio de separación de responsabilidades:
+            </p>
+            <ul class="text-muted small ps-3 mb-0 flex-grow-1">
+              <li class="mb-2"><strong>Contenido:</strong> La información bruta, textos, datos y multimedia transmitidos al usuario.</li>
+              <li class="mb-2"><strong>Estructura (HTML):</strong> La jerarquía y significado semántico del contenido (títulos, listas, secciones).</li>
+              <li><strong>Presentación (CSS):</strong> La estética visual, tipografías, colores, alineación espacial y animaciones.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Formas de Aplicar CSS -->
+        <div class="col-12">
+          <div class="investigation-card">
+            <div class="icon-box-badge icon-green">
+              <i class="bi bi-code-square"></i>
+            </div>
+            <h4 class="fw-bold text-dark mb-2">3. Formas de Aplicar CSS</h4>
+            <p class="text-muted small mb-4">
+              Existen tres métodos estandarizados para vincular estilos a un documento HTML:
+            </p>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border h-100">
+                  <h6 class="fw-bold text-dark mb-1">En Línea (Inline)</h6>
+                  <span class="code-tag">&lt;p style="color: blue;"&gt;</span>
+                  <p class="text-muted small mt-2 mb-0">Se aplica directamente en el atributo del elemento. Tiene la máxima especificidad pero no es reutilizable.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border h-100">
+                  <h6 class="fw-bold text-dark mb-1">Interno (Embebido)</h6>
+                  <span class="code-tag">&lt;style&gt; p { color: blue; } &lt;/style&gt;</span>
+                  <p class="text-muted small mt-2 mb-0">Declarado dentro de la etiqueta <code class="code-tag">&lt;head&gt;</code>. Útil para estilos exclusivos de una sola página.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border h-100">
+                  <h6 class="fw-bold text-dark mb-1">Externo (Recomendado)</h6>
+                  <span class="code-tag">&lt;link rel="stylesheet" href="..."&gt;</span>
+                  <p class="text-muted small mt-2 mb-0">Hojas de estilo en archivos <code class="code-tag">.css</code> separados. Permite reutilizar reglas en todo el sitio web.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Selectores, Clases e Identificadores -->
+        <div class="col-lg-6">
+          <div class="investigation-card h-100 d-flex flex-column">
+            <div class="icon-box-badge icon-indigo">
+              <i class="bi bi-cursor-fill"></i>
+            </div>
+            <h4 class="fw-bold text-dark mb-2">4. Selectores, Clases e IDs</h4>
+            <p class="text-muted small mb-3">
+              Los selectores definen a qué elementos HTML se les aplicarán las reglas de diseño:
+            </p>
+            <ul class="text-muted small ps-3 mb-0 flex-grow-1">
+              <li class="mb-2"><strong>Selector de Tipo / Etiqueta:</strong> Afecta a todos los elementos del mismo tipo (ej. <code class="code-tag">h1</code>, <code class="code-tag">p</code>).</li>
+              <li class="mb-2"><strong>Clases (<code class="code-tag">.clase</code>):</strong> Reutilizables en múltiples elementos para aplicar estilos compartidos (ej. <code class="code-tag">.card-item</code>).</li>
+              <li><strong>Identificadores (<code class="code-tag">#id</code>):</strong> Únicos por documento; tienen mayor especificidad y se usan para elementos singulares (ej. <code class="code-tag">#header</code>).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. Modelo de Caja (Box Model) -->
+        <div class="col-lg-6">
+          <div class="investigation-card h-100 d-flex flex-column">
+            <div class="icon-box-badge icon-amber">
+              <i class="bi bi-bounding-box-circles"></i>
+            </div>
+            <h4 class="fw-bold text-dark mb-2">5. El Modelo de Caja (Box Model)</h4>
+            <p class="text-muted small mb-3">
+              En CSS, cada elemento se renderiza como una caja rectangular compuesta por 4 capas concéntricas:
+            </p>
+            <div class="box-model-diagram mb-2">
+              <div class="p-2 border border-warning rounded mb-1 bg-warning bg-opacity-10 small fw-semibold">Margin (Margen exterior)</div>
+              <div class="p-2 border border-danger rounded mb-1 bg-danger bg-opacity-10 small fw-semibold">Border (Borde)</div>
+              <div class="p-2 border border-success rounded mb-1 bg-success bg-opacity-10 small fw-semibold">Padding (Relleno interno)</div>
+              <div class="p-2 border border-primary rounded bg-primary bg-opacity-10 small fw-bold">Content (Contenido)</div>
+            </div>
+            <p class="text-muted small mb-0">La propiedad <code class="code-tag">box-sizing: border-box</code> asegura que el padding y el borde no aumenten el tamaño total definido para el elemento.</p>
+          </div>
+        </div>
+
+        <!-- 6. Estilos CSS Aplicados en SIX-SEVEN -->
+        <div class="col-12">
+          <div class="investigation-card">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icon-box-badge icon-rose mb-0">
+                <i class="bi bi-palette-fill"></i>
+              </div>
+              <div>
+                <h4 class="fw-bold text-dark mb-0">6. Ejemplos de CSS Personalizado en SIX-SEVEN</h4>
+                <span class="text-muted small">Reglas CSS propias implementadas en nuestra plataforma</span>
+              </div>
+            </div>
+
+            <div class="row g-3 pt-2">
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border">
+                  <h6 class="fw-bold text-dark mb-1">Efectos Hover en Tarjetas</h6>
+                  <p class="text-muted small mb-2">Transiciones suaves con elevación de sombras y escalado:</p>
+                  <span class="code-tag">transform: translateY(-3px);</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border">
+                  <h6 class="fw-bold text-dark mb-1">Degradados y Fondos Hero</h6>
+                  <p class="text-muted small mb-2">Superposición de capas translúcidas para contraste de texto:</p>
+                  <span class="code-tag">background: linear-gradient(...)</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 bg-light rounded-3 border">
+                  <h6 class="fw-bold text-dark mb-1">Control de Imágenes</h6>
+                  <p class="text-muted small mb-2">Ajuste de encuadre responsivo sin distorsión de aspecto:</p>
+                  <span class="code-tag">object-fit: cover;</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botón Volver al Índice -->
+      <div class="text-center mt-5 mb-4">
+        <a class="btn btn-outline-dark px-4 py-2 rounded-pill shadow-sm" href="investigacion.html">
+          <i class="bi bi-arrow-left me-1"></i> Volver al Índice
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer light-background text-center py-4">
+    <div class="container">
+      <p class="mb-0">© <strong>EQUIPO SIX-SEVEN</strong> - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
