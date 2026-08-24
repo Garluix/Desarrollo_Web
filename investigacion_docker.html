@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Investigacion Docker - EQUIPO SIX-SEVEN</title>
+<link rel="icon" type="image/png" href="assets/img/horsecon.png">
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.googleapis.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet">
+
+<style>
+.blog-header {
+    background: linear-gradient(rgba(12, 35, 52, 0.72), rgba(12, 35, 52, 0.72)), url('assets/img/2023-04-11-Docker.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 90px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.investigation-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.investigation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.icon-box-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.icon-blue { background-color: #e0f2fe; color: #0284c7; }
+.icon-green { background-color: #dcfce7; color: #16a34a; }
+.icon-amber { background-color: #fef3c7; color: #d97706; }
+.icon-indigo { background-color: #e0e7ff; color: #4f46e5; }
+.icon-rose { background-color: #ffe4e6; color: #e11d48; }
+
+.code-tag {
+    font-family: monospace;
+    background-color: #f1f5f9;
+    color: #0d6efd;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.docker-code {
+    background-color: #12212d;
+    color: #e4f4ff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+</style>
+</head>
+
+<body class="index-page">
+
+<header id="header" class="header d-flex align-items-center sticky-top">
+<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+    <img src="assets/img/logo-equipo.jpg" alt="Logo SIX-SEVEN">
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="investigacion.html" class="active">Investigacion</a></li>
+    </ul>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+</div>
+</header>
+
+<main class="main">
+<header class="blog-header">
+    <div class="container">
+    <h1>Investigacion sobre Docker</h1>
+    <p>Contenedores para desarrollar, distribuir y ejecutar aplicaciones</p>
+    </div>
+</header>
+
+<div class="container my-5">
+    <div class="row g-4">
+
+    <div class="col-lg-6">
+        <div class="investigation-card h-100 d-flex flex-column">
+        <div class="icon-box-badge icon-blue">
+            <i class="bi bi-box-seam"></i>
+        </div>
+        <h4 class="fw-bold text-dark mb-2">1. Que es Docker?</h4>
+        <p class="text-muted small flex-grow-1">
+            Docker es una plataforma de codigo abierto que permite empaquetar una aplicacion junto con sus dependencias dentro de un contenedor. De esta forma, el software puede ejecutarse de manera consistente en distintos equipos y ambientes.
+        </p>
+        <div class="p-3 bg-light rounded-3 mt-2 border">
+            <small class="text-secondary d-block"><strong>Objetivo principal:</strong> evitar diferencias entre el ambiente de desarrollo, pruebas y produccion.</small>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="investigation-card h-100 d-flex flex-column">
+        <div class="icon-box-badge icon-green">
+            <i class="bi bi-lightning-charge-fill"></i>
+        </div>
+        <h4 class="fw-bold text-dark mb-2">2. Ventajas de utilizar Docker</h4>
+        <ul class="text-muted small ps-3 mb-0 flex-grow-1">
+            <li class="mb-2"><strong>Portabilidad:</strong> una imagen puede ejecutarse en cualquier sistema compatible.</li>
+            <li class="mb-2"><strong>Aislamiento:</strong> cada aplicacion mantiene sus dependencias separadas.</li>
+            <li class="mb-2"><strong>Rapidez:</strong> los contenedores se inician en pocos segundos.</li>
+            <li><strong>Eficiencia:</strong> usan menos recursos que una maquina virtual tradicional.</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="investigation-card">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+            <div class="icon-box-badge icon-amber">
+                <i class="bi bi-layers-fill"></i>
+            </div>
+            <h4 class="fw-bold text-dark mb-2">3. Imagenes y contenedores</h4>
+            <p class="text-muted small mb-3">
+                Una imagen es una plantilla inmutable que contiene el codigo, las librerias y la configuracion de una aplicacion. Un contenedor es una instancia en ejecucion de esa imagen. Varias instancias pueden utilizar la misma imagen sin modificarla.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-light text-dark border px-3 py-2">Imagen: plantilla</span>
+                <span class="badge bg-light text-dark border px-3 py-2">Contenedor: proceso</span>
+                <span class="badge bg-light text-dark border px-3 py-2">Registry: almacenamiento</span>
+            </div>
+            </div>
+            <div class="col-lg-4 text-center d-none d-lg-block">
+            <i class="bi bi-boxes text-primary" style="font-size: 5rem; opacity: 0.85;"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="investigation-card">
+        <div class="icon-box-badge icon-indigo">
+            <i class="bi bi-file-earmark-code-fill"></i>
+        </div>
+        <h4 class="fw-bold text-dark mb-2">4. Dockerfile</h4>
+        <p class="text-muted small mb-4">
+            Un Dockerfile es un archivo de texto con instrucciones para construir una imagen. Cada instruccion puede generar una capa reutilizable, lo que ayuda a acelerar futuras construcciones.
+        </p>
+        <pre class="docker-code"><code>FROM nginx:alpine
+COPY . /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]</code></pre>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="investigation-card h-100 d-flex flex-column">
+        <div class="icon-box-badge icon-rose">
+            <i class="bi bi-terminal-fill"></i>
+        </div>
+        <h4 class="fw-bold text-dark mb-2">5. Comandos esenciales</h4>
+        <div class="table-responsive mt-auto">
+            <table class="table table-sm table-bordered align-middle mb-0" style="font-size: 0.83rem;">
+            <thead class="table-light">
+                <tr>
+                <th>Comando</th>
+                <th>Funcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="fw-bold"><code>docker build</code></td><td>Construye una imagen.</td></tr>
+                <tr><td class="fw-bold"><code>docker run</code></td><td>Crea e inicia un contenedor.</td></tr>
+                <tr><td class="fw-bold"><code>docker ps</code></td><td>Muestra contenedores activos.</td></tr>
+                <tr><td class="fw-bold"><code>docker stop</code></td><td>Detiene un contenedor.</td></tr>
+            </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="investigation-card h-100 d-flex flex-column">
+        <div class="icon-box-badge icon-blue">
+            <i class="bi bi-diagram-3-fill"></i>
+        </div>
+        <h4 class="fw-bold text-dark mb-2">6. Docker Compose</h4>
+        <p class="text-muted small mb-0">
+            Docker Compose permite definir y ejecutar aplicaciones formadas por varios servicios mediante un archivo YAML. Es util para coordinar una aplicacion web, una base de datos y otros servicios relacionados con un solo comando.
+        </p>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="investigation-card">
+        <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="icon-box-badge icon-green mb-0">
+            <i class="bi bi-check2-circle"></i>
+            </div>
+            <div>
+            <h4 class="fw-bold text-dark mb-0">7. Docker en el desarrollo web</h4>
+            <span class="text-muted small">Una herramienta para trabajar de forma reproducible</span>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap gap-2 pt-2">
+            <span class="badge bg-light text-dark border p-2 px-3 fw-semibold"><i class="bi bi-code-slash me-1 text-primary"></i> Entornos reproducibles</span>
+            <span class="badge bg-light text-dark border p-2 px-3 fw-semibold"><i class="bi bi-shield-check me-1 text-success"></i> Aislamiento</span>
+            <span class="badge bg-light text-dark border p-2 px-3 fw-semibold"><i class="bi bi-cloud-arrow-up me-1 text-info"></i> Despliegue continuo</span>
+            <span class="badge bg-light text-dark border p-2 px-3 fw-semibold"><i class="bi bi-database me-1 text-warning"></i> Servicios separados</span>
+        </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="text-center mt-5 mb-4">
+    <a class="btn btn-outline-dark px-4 py-2 rounded-pill shadow-sm" href="index.html">
+        <i class="bi bi-arrow-left me-1"></i> Volver al Inicio
+    </a>
+    </div>
+</div>
+</main>
+
+<footer id="footer" class="footer light-background text-center py-4">
+<div class="container">
+    <p class="mb-0">© <strong>EQUIPO SIX-SEVEN</strong> - Todos los derechos reservados</p>
+</div>
+</footer>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
