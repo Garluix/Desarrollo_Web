@@ -25,10 +25,30 @@
   <!-- CSS Principal del Tema -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-
+  <style>
+    /* Estilos adaptados para las tarjetas de integrantes */
+    .team-avatar {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #f1f6fb;
+      margin-top: 1rem;
+    }
+    .member-card {
+      border: 1px solid #eef2f6;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #ffffff;
+    }
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+  </style>
 </head>
 
-<body class="starter-page-page page-integrantes">
+<body class="starter-page-page">
 
   <!-- Encabezado / Barra de Navegación -->
   <header id="header" class="header d-flex align-items-center sticky-top">
@@ -67,15 +87,15 @@
           <!-- Integrante 1 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card member-card h-100 text-center p-3">
-              <img src="assets/img/Integrantes/Foto-benjamin.jpeg" class="team-avatar mx-auto" alt="Foto benjamin">
+              <img src="assets/img/Foto-benjamin.jpeg" class="team-avatar mx-auto" alt="Foto benjamin">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold mt-2">
-                  <a href="paginas-integrantes/benjamin.html" class="text-decoration-none text-dark">Benjamin Del Valle</a>
+                  <a href="benjamin.html" class="text-decoration-none text-dark">Benjamin Del Valle</a>
                 </h5>
                 <span class="text-primary fw-semibold mb-2">Scrum Master</span>
                 <p class="card-text text-muted small flex-grow-1">Encargado del desarrollo del proyecto y de coordinar al equipo, 
                   promoviendo la organización, colaboración y cumplimiento de las tareas.</p>
-                <a href="paginas-integrantes/benjamin.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
+                <a href="benjamin.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
               </div>
             </div>
           </div>
@@ -83,14 +103,14 @@
           <!-- Integrante 2 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card member-card h-100 text-center p-3">
-              <img src="assets/img/Integrantes/IMG_5561.JPG" class="team-avatar mx-auto" alt="Foto Javiera Fuentealba">
+              <img src="assets/img/IMG_5561.JPG" class="team-avatar mx-auto" alt="Foto Javiera Fuentealba">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold mt-2">
-                  <a href="paginas-integrantes/javiera.html" class="text-decoration-none text-dark">Javiera Fuentealba</a>
+                  <a href="javiera.html" class="text-decoration-none text-dark">Javiera Fuentealba</a>
                 </h5>
                 <span class="text-primary fw-semibold mb-2">Developer</span>
-                <p class="card-text text-muted small flex-grow-1">Breve descripción personal de las responsabilidades y habilidades en el equipo.</p>
-                <a href="paginas-integrantes/javiera.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
+                <p class="card-text text-muted small flex-grow-1">Encargada del desarrollo de la página web e investigaciones de boostrap y comandos docker.</p>
+                <a href="javiera.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
               </div>
             </div>
           </div>
@@ -98,14 +118,14 @@
           <!-- Integrante 3 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card member-card h-100 text-center p-3">
-              <img src="assets/img/Integrantes/jose2.jpeg" class="team-avatar mx-auto" alt="Foto Jose ">
+              <img src="assets/img/jose2.jpeg" class="team-avatar mx-auto" alt="Foto Jose ">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold mt-2">
-                  <a href="paginas-integrantes/jose.html" class="text-decoration-none text-dark">José Velíz</a>
+                  <a href="jose.html" class="text-decoration-none text-dark">José Velíz</a>
                 </h5>
                 <span class="text-primary fw-semibold mb-2">Developer</span>
-                <p class="card-text text-muted small flex-grow-1">Breve descripción personal de las responsabilidades y habilidades en el equipo.</p>
-                <a href="paginas-integrantes/jose.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
+                <p class="card-text text-muted small flex-grow-1">Encargado del desarrollo de la página web, diseño y del registro de las dificultades del equipo.</p>
+                <a href="jose.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
               </div>
             </div>
           </div>
@@ -113,14 +133,14 @@
           <!-- Integrante 4 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="card member-card h-100 text-center p-3">
-              <img src="assets/img/Integrantes/fotojean.jpg" class="team-avatar mx-auto" alt="Foto Jean ">
+              <img src="assets/img/fotojean.jpg" class="team-avatar mx-auto" alt="Foto Jean ">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold mt-2">
-                  <a href="paginas-integrantes/jean.html" class="text-decoration-none text-dark">Jean Montenegro</a>
+                  <a href="jean.html" class="text-decoration-none text-dark">Jean Montenegro</a>
                 </h5>
                 <span class="text-primary fw-semibold mb-2"> QA Developer</span>
                 <p class="card-text text-muted small flex-grow-1">Breve descripción personal de las responsabilidades y habilidades en el equipo.</p>
-                <a href="paginas-integrantes/jean.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
+                <a href="jean.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
               </div>
             </div>
           </div>
@@ -128,14 +148,14 @@
           <!-- Integrante 5 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="card member-card h-100 text-center p-3">
-              <img src="assets/img/Integrantes/Foto-matias.jpg" class="team-avatar mx-auto" alt="Foto matias ">
+              <img src="assets/img/Foto-matias.jpg" class="team-avatar mx-auto" alt="Foto matias ">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fw-bold mt-2">
-                  <a href="paginas-integrantes/matias.html" class="text-decoration-none text-dark">Matias Palma</a>
+                  <a href="matias.html" class="text-decoration-none text-dark">Matias Palma</a>
                 </h5>
                 <span class="text-primary fw-semibold mb-2"> Git Developer</span>
                 <p class="card-text text-muted small flex-grow-1">Desarrollador encargado de la gestión de versiones en GitHub, desarrollo web y soporte técnico para los objetivos del equipo.</p>
-                <a href="paginas-integrantes/matias.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
+                <a href="matias.html" class="btn btn-outline-primary btn-sm mt-3">Ver Perfil</a>
               </div>
             </div>
           </div>
